@@ -2,6 +2,9 @@ import { useState } from "react";
 
 function App(/**/{title, description}) {
   const [ number, setNumber ] = useState(0);
+
+  const fruits = [ "Maca", "Mamao", "Abacaxi"];
+
   return (
     <>
       <h1>{title} - {number}</h1>
@@ -33,7 +36,14 @@ function App(/**/{title, description}) {
         ))}
         
       </ul>  
-       
+      <hr/>
+
+       <ul>
+        {fruits.map((fruit) => (
+          <li key={fruit}>{fruit}</li>
+
+        ))}
+       </ul>
       
     </>
   );
